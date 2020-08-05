@@ -1,0 +1,30 @@
+
+.ab-spinner {
+	position: absolute;
+	height: inherit;
+	width: inherit;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@keyframes ab-spinner-animation {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.ab-spinner-icon {
+	box-sizing: border-box;
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	border-radius: 50%;
+	border: 10px solid #ccc;
+	border-top-color: #3371AA;
+	animation: ab-spinner-animation .6s linear infinite;
+}
+
+.ab-spinner-label {
+	margin: 5px;
+}

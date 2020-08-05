@@ -1,0 +1,40 @@
+import { Meta, Preview, Canvas, Props, Stories, Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="Components|Getting Started" />
+
+# Getting Started
+
+<Description>
+  Autobahn Components provides engineers a collection of re-usable full featured components built on React which can be used in Ronaele, Eleanor and THD projects.
+</Description>
+
+## How to Install
+Run the following commands using npm:
+
+``` node
+
+npm install @gcc/autobahn-components
+```
+
+## Integration Example
+Follow the basic example below to integrate Autobahn Components into an application:
+
+``` node
+import React from 'react';
+import { Spinner } from '@gcc/autobahn-components';
+
+const App = (props) => {
+
+  return (
+    <Spinner />
+  );
+};
+
+export default App;
+
+```
