@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "start-storybook",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "build:ci": "node scripts/ci/build.js",
+    "merge:ci": "node scripts/ci/merge.js"
   },
   "author": "Eric Schall",
   "dependencies": {
