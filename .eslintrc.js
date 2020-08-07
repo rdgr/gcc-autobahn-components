@@ -5,6 +5,7 @@ module.exports = {
   ],
   parser: 'babel-eslint',
   rules: {
-    'linebreak-style': 'off',
+    'linebreak-style': 'off', // LF or CRLF
+    'react/jsx-filename-extension': 'off',
   },
 };
