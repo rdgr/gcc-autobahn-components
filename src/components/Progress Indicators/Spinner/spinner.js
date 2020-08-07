@@ -67,11 +67,15 @@ Spinner.propTypes = {
   inline: PropTypes.bool,
   /** Text that will be rendered with the Spinner. */
   label: PropTypes.string,
-  /**
-   * Specifies the size of the Spinner.
-   * Acceptable values are 'sm', 'small', 'med', 'medium', 'lg' and 'large'.
-   * */
-  size: PropTypes.string,
+  /** Specifies the size of the Spinner. */
+  size: PropTypes.oneOf([
+    'sm',
+    'small',
+    'med',
+    'medium',
+    'lg',
+    'large',
+  ]),
   children: PropTypes.node,
 };
 
