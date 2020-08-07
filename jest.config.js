@@ -5,14 +5,14 @@ module.exports = {
     'src/**/[^_]*.{js,jsx,mjs}',
     '!src/**/*.stories.{js,jsx,mjs}',
   ],
-  // coverageThreshold: {
-  //   src: {
-  //     functions: 30,
-  //     lines: 30,
-  //     statements: 30,
-  //     branches: 30,
-  //   },
-  // },
+  coverageThreshold: {
+    src: {
+      functions: 70,
+      lines: 70,
+      statements: 70,
+      branches: 70,
+    },
+  },
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/config/jest/fileTransform.js',
