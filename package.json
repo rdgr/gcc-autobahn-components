@@ -48,6 +48,7 @@
     "react-is": "^16.13.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
+    "standard-version": "^8.0.2",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-node-externals": "^1.7.2"
