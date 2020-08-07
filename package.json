@@ -8,6 +8,7 @@
     "build": "webpack --mode production",
     "build:ci": "node scripts/ci/build.js",
     "merge:ci": "node scripts/ci/merge.js",
+    "version:ci": "standard-version",
     "clean": "rimraf dist",
     "lint": "eslint src --color",
     "test": "jest",
