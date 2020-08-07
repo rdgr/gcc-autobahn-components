@@ -6,6 +6,9 @@
   "scripts": {
     "start": "start-storybook",
     "build": "webpack --mode production",
+    "build:ci": "node scripts/ci/build.js",
+    "merge:ci": "node scripts/ci/merge.js",
+    "version:ci": "standard-version",
     "clean": "rimraf dist",
     "lint": "eslint src --color",
     "test": "jest",
@@ -14,6 +17,7 @@
   },
   "author": "Eric Schall",
   "dependencies": {
+    "commitlint": "^9.1.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -23,6 +27,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+    "@commitlint/config-conventional": "^9.1.1",
     "@mdx-js/loader": "^1.6.16",
     "@storybook/addon-a11y": "^5.3.19",
     "@storybook/addon-docs": "^5.3.19",
@@ -39,6 +44,7 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.5",
+    "husky": "^4.2.5",
     "jest": "^26.2.2",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
@@ -46,8 +52,14 @@
     "react-is": "^16.13.1",
     "rimraf": "^3.0.2",
     "sass-loader": "^8.0.2",
+    "standard-version": "^8.0.2",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-node-externals": "^1.7.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
