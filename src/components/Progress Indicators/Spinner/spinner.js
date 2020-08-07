@@ -53,8 +53,7 @@ const Spinner = ({
           {children}
         </div>
       </div>
-      {label
-        && <span className="ab-spinner-label">{label}</span>}
+      {label && <span className="ab-spinner-label">{label}</span>}
     </div>
   );
 };
