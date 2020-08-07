@@ -3,7 +3,7 @@ import { Meta, Preview, Canvas, Props, Stories, Title,
   Description,
   Primary,
   ArgsTable } from '@storybook/addon-docs/blocks';
-import { Spinner } from './spinner.js'
+import Spinner from './spinner.js'
 
 
 <Meta title="Components|Progress Indicators/Spinner" component={Spinner} />
@@ -54,9 +54,9 @@ Properties are custom attribute/props exposed publicly in which to provide value
 ## Integration Example
 Follow the example below to integrate the Spinner component into your application:
 
-``` node
+```jsx
 import React from 'react';
-import { Spinner } from '@gcc/autobahn-components';
+import Spinner from '@gcc/autobahn-components';
 
 const App = (props) => {
 
