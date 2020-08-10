@@ -7,7 +7,7 @@ const execAsync = util.promisify(exec);
 module.exports = {
 
   async push(options, token, logMsg) {
-    const command = `git push "https://blinds-autobahn:${token}@github.com/GCC-Autobahn/gcc-micro-frontend" ${options}`;
+    const command = `git push "https://blinds-autobahn:${token}@github.com/GCC-Autobahn/gcc-autobahn-components" ${options}`;
 
     try {
       const { stdout, stderr } = await execAsync(command);

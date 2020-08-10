@@ -6,8 +6,6 @@ const GITHUB_TOKEN = process.argv[2];
 
 (async () => {
   try {
-    console.log('token', GITHUB_TOKEN);
-
     await npm.command('install', '', 'INSTALLING DEPENDENCIES');
 
     await npm.command('run build', '', 'BUILDING LIBRARY');
