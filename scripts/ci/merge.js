@@ -1,11 +1,24 @@
 /* eslint-disable no-console */
 const npm = require('./npm-commands');
+const git = require('./git-commands');
+
+const GITHUB_TOKEN = process.argv[2];
 
 (async () => {
   try {
+    console.log('token', GITHUB_TOKEN);
+
     await npm.command('install', '', 'INSTALLING DEPENDENCIES');
 
     await npm.command('run build', '', 'BUILDING LIBRARY');
+
+    await npm.command('run version:ci', '', 'VERSIONING LIBRARY');
+
+    // Push all commits.
+    await git.push('', GITHUB_TOKEN, 'PUSHING COMMITS');
+
+    // Push tags.
+    await git.push('--tags', GITHUB_TOKEN, 'PUSHING VERSION TAGS');
 
     await npm.command('publish', '', 'PUBLISHING LIBRARY');
   } catch (e) {
