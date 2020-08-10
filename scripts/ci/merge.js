@@ -12,7 +12,6 @@ const GITHUB_TOKEN = process.argv[2];
 
     await npm.command('run version:ci', '', 'VERSIONING LIBRARY');
 
-    // Push all commits.
     await git.push('', GITHUB_TOKEN, 'PUSHING COMMITS');
 
     // Push tags.
