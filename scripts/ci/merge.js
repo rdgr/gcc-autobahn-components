@@ -7,6 +7,8 @@ const npm = require('./npm-commands');
 
     await npm.command('run build', '', 'BUILDING LIBRARY');
 
+    await npm.command('run version:ci', '', 'VERSIONING LIBRARY');
+
     await npm.command('publish', '', 'PUBLISHING LIBRARY');
   } catch (e) {
     console.log(`BUILD FAILED: ${e}`);
