@@ -14,7 +14,6 @@ const GITHUB_TOKEN = process.argv[2];
 
     await git.push('', GITHUB_TOKEN, 'PUSHING COMMITS');
 
-    // Push tags.
     await git.push('--tags', GITHUB_TOKEN, 'PUSHING VERSION TAGS');
 
     await npm.command('publish', '', 'PUBLISHING LIBRARY');
