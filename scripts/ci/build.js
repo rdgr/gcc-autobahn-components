@@ -5,7 +5,7 @@ const npm = require('./npm-commands');
   try {
     await npm.command('install', '', 'INSTALLING DEPENDENCIES');
 
-    await npm.command('run build', '', 'INSTALLING DEPENDENCIES');
+    await npm.command('run build', '', 'BUILDING CHANGES');
 
     await npm.command('run test:coverage', '', 'TESTING BUILD');
   } catch (e) {
