@@ -14,7 +14,7 @@
     "test": "jest",
     "test:coverage": "rimraf coverage && npm run test -- --coverage",
     "prebuild": "npm-run-all --serial lint test:coverage clean",
-    "build-storybook": "build-storybook -s public",
+    "build-storybook": "build-storybook -o ./docs",
     "publish-storybook": "npx chromatic --project-token=10qsnyp705vl",
     "chromatic": "npx chromatic --project-token 10qsnyp705vl"
   },
