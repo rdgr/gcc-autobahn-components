@@ -46,8 +46,8 @@ module.exports = {
       throw (e);
     }
   },
-  async status(options, logMsg) {
-    const command = `git status ${options}`;
+  async command(cmd, options, logMsg) {
+    const command = `git ${cmd} ${options}`;
 
     try {
       const { stdout, stderr } = await execAsync(command);
