@@ -1,8 +1,8 @@
-import { Meta, Preview, Canvas, Props, Stories, Title,
+import { Meta, Preview, Canvas, Props, Stories, Story, Title,
   Subtitle,
   Description,
   Primary,
-  ArgsTable } from '@storybook/addon-docs/blocks';
+  ArgsTable, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
 import Spinner from './spinner.js'
 
 
@@ -18,22 +18,26 @@ import Spinner from './spinner.js'
 Use the `size` property to specify a small, medium, or large Spinner.
 
 <Preview>
-  <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-evenly' }}>
-    <Spinner size="sm"     label="small" />
-    <Spinner size="medium" label="medium" />
-    <Spinner size="large"  label="large" />
-  </div>
+  <Story name="Size" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-evenly' }}>
+    <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-evenly' }}>
+      <Spinner size="sm"     label="small" />
+      <Spinner size="medium" label="medium" />
+      <Spinner size="large"  label="large" />
+    </div>
+  </Story>
 </Preview>
 
 ## Colors
 Use the `background` and `color` properties to change the colors of the Spinners channel and indicator.
 
 <Preview>
-  <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-evenly' }}>
-    <Spinner size="large" color="#00A895" />
-    <Spinner size="large"  />
-    <Spinner size="large" background="#555555" color="#FFCC00" />
-  </div>
+  <Story name="Colors">
+    <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-evenly' }}>
+      <Spinner size="large" color="#00A895" />
+      <Spinner size="large"  />
+      <Spinner size="large" background="#555555" color="#FFCC00" />
+    </div>
+  </Story>
 </Preview>
 
 ## Labels
