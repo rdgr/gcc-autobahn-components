@@ -26,8 +26,8 @@ module.exports = {
       throw (e);
     }
   },
-  async commit(options, logMsg) {
-    const command = `git commit ${options}`;
+  async commit(msg, options, logMsg) {
+    const command = `git commit -m "${msg}" ${options}`;
 
     try {
       const { stdout, stderr } = await execAsync(command);
