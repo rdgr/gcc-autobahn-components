@@ -18,7 +18,7 @@ const GITHUB_TOKEN = process.argv[2];
 
     await npm.command('run build-storybook', '', 'BUILDING STORYBOOK DOCUMENTATION');
 
-    await git.commit('-m chore(release): storybook documentation', 'BUILDING STORYBOOK DOCUMENTATION');
+    await git.commit('-m chore(release): storybook documentation', '', 'BUILDING STORYBOOK DOCUMENTATION');
 
     await git.push('', GITHUB_TOKEN, 'PUSHING STORYBOOK DOCUMENTATION');
   } catch (e) {
