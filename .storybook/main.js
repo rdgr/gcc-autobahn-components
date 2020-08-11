@@ -44,7 +44,6 @@ module.exports = {
 	stories: ['../src/**/*.story.@(js|mdx)'],
 	addons: [
     '@storybook/addon-a11y',
-    // '@storybook/addon-docs',
     {
       name: '@storybook/addon-docs/preset',
       options: {

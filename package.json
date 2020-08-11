@@ -13,7 +13,10 @@
     "lint": "eslint src --color",
     "test": "jest",
     "test:coverage": "rimraf coverage && npm run test -- --coverage",
-    "prebuild": "npm-run-all --serial lint test:coverage clean"
+    "prebuild": "npm-run-all --serial lint test:coverage clean",
+    "build-storybook": "build-storybook -s public",
+    "publish-storybook": "npx chromatic --project-token=10qsnyp705vl",
+    "chromatic": "npx chromatic --project-token 10qsnyp705vl"
   },
   "author": "Eric Schall",
   "dependencies": {
@@ -36,6 +39,7 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.2.2",
     "babel-loader": "^8.1.0",
+    "chromatic": "^5.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
