@@ -2,7 +2,6 @@
 const npm = require('./npm-commands');
 const git = require('./git-commands');
 
-//
 const GITHUB_TOKEN = process.argv[2];
 
 (async () => {
