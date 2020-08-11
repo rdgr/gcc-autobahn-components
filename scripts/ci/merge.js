@@ -8,8 +8,6 @@ const GITHUB_TOKEN = process.argv[2];
   try {
     await npm.command('install', '', 'INSTALLING DEPENDENCIES');
 
-    //  await npm.command('run build', '', 'BUILDING LIBRARY');
-
     await npm.command('run version:ci', '', 'VERSIONING LIBRARY');
 
     await git.push('', GITHUB_TOKEN, 'PUSHING COMMITS');
