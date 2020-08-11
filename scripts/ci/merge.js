@@ -15,6 +15,10 @@ const GITHUB_TOKEN = process.argv[2];
     await git.push('--tags', GITHUB_TOKEN, 'PUSHING VERSION TAGS');
 
     await npm.command('publish', '', 'PUBLISHING LIBRARY');
+
+    await git.commit('build-storybook', '-m chore(release): storybook documentation', 'BUILDING STORYBOOK DOCUMENTATION');
+
+    await git.push('', GITHUB_TOKEN, 'PUSHING STORYBOOK DOCUMENTATION');
   } catch (e) {
     console.log(`BUILD FAILED: ${e}`);
     throw e;

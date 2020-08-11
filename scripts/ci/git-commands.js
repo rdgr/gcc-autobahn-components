@@ -26,6 +26,26 @@ module.exports = {
       throw (e);
     }
   },
+  async commit(options, logMsg) {
+    const command = `git commit ${options}`;
+
+    try {
+      const { stdout, stderr } = await execAsync(command);
+      console.log('--------------------------------------------------------------------------');
+      console.log(logMsg);
+      console.log('--------------------------------------------------------------------------');
+      console.log(`Command: ${command}\n`);
+      console.log(stderr);
+      console.log(stdout);
+    } catch (e) {
+      console.log('--------------------------------------------------------------------------');
+      console.log(logMsg);
+      console.log('--------------------------------------------------------------------------');
+      console.log(`Command: ${command}\n`);
+      console.log(e.toString(), e);
+      throw (e);
+    }
+  },
   async status(options, logMsg) {
     const command = `git status ${options}`;
 
