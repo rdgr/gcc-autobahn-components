@@ -1,0 +1,38 @@
+import { Meta, Preview, Canvas, Props, Stories, Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="Introduction|Themes" />
+
+# Themeing
+
+<Description>
+  We can define all of our themes here so developers can have a reference when making changes.
+</Description>
+
+## Colors Palettes
+<ColorPalette>
+  <ColorItem
+    title="Blinds.com"
+    subtitle="Primary"
+    colors={['#FFFFFF', '#E5E9F0', '#3060AF']}
+  />
+  <ColorItem
+    title="JustBlinds.com"
+    subtitle="Primary"
+    colors={['#FFFFFF', '#F8F8F8', '#00A895']}
+  />
+  <ColorItem
+    title="AmericanBlinds.com"
+    subtitle="Primary"
+    colors={['#FFFFFF', '#F6F6F6', '#D4B019']}
+  />
+  <ColorItem
+    title="Homedepot.com"
+    subtitle="Primary"
+    colors={['#FFFFFF', '#EEEEEE', '#F66202']}
+  />
+</ColorPalette>
