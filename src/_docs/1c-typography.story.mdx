@@ -1,0 +1,43 @@
+import { Meta, Preview, Canvas, Props, Stories, Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable, ColorPalette, ColorItem, Typeset } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="Introduction|Design/Typography" />
+
+<Title>Typography</Title>
+
+<Description>
+  Typography is the art of arranging letters and text in a way that makes the copy legible, clear, and visually appealing to the reader. Typography involves font style, appearance, and structure, which aims to elicit certain emotions and convey specific messages. In short, typography is what brings the text to life.
+</Description>
+
+## Typeface
+
+<div style={{marginTop: '30px', fontSize: '20px', fontWeight: 'bold', color: '#555'}}>Open Sans</div>
+<Description>
+  Enterprise applications leverage Open Sans as the typeface of choice, because of its excellent legibility, friendly appearance, and flexibility. Open Sans is able to meet the growing demands and everchanging technology landscape that The Home Depot works within.
+</Description>
+
+## Typescale
+<Typeset fontSizes={['12px', '14px', '16px', '18px', '20px', '24px', '28px', '32px', '36px']} sampleText={['You can do it. We can help.']} style={{ fontFamily: 'open sans'}} />
+
+## Typographic Treatments
+<div style={{marginTop: '30px', fontSize: '20px', fontWeight: 'bold', color: '#555'}}>Font Weight</div>
+<div style={{ display: 'flex' }}>
+  <div style={{ display: 'flex', flexDirection: 'column', flex: '1' }}>
+    <Description>
+      Font weight is a useful tool that can help differentiate emphasis and impute content organization. It is important to consider the font weight relative to the size as it has the greatest impact when paired effectively. These can be combined in unique ways to create an implied hierarchy.
+    </Description>
+    <Description>
+      Open Sans is available in a variety of weights, but only SemiBold, Regular, and Light should be used.
+    </Description>
+  </div>
+  <div style={{ display: 'flex', flexDirection: 'column', flex: '1', alignItems: 'center' }}>
+    <span style={{ fontSize: '28px', fontWeight: '300'}}>Light 300</span>
+    <span style={{ fontSize: '28px', fontWeight: '400'}}>Regular 400</span>
+    <span style={{ fontSize: '28px', fontWeight: '600'}}>Semi-bold 600</span>
+    <span style={{ fontSize: '28px', fontWeight: '700'}}>Bold 700</span>
+  </div>
+</div>
