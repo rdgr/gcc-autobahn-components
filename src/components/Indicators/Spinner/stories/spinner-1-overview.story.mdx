@@ -1,0 +1,69 @@
+import { Meta, Preview, Canvas, Props, Stories, Story, Title,
+  Subtitle,
+  Description,
+  Primary,
+  ArgsTable, ColorPalette, ColorItem, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
+import Spinner from '../spinner.js'
+
+
+<Meta title="Components|Indicators/Spinner/Overview" component={Spinner} />
+
+# Spinner
+
+<Description>
+  Spinners, similar to Progress Bars, are used when retrieving data or performing slow computations that are indeterminate, spinners communicate to the user that content is loading.
+</Description>
+
+## Properties
+Properties are custom attribute/props exposed publicly in which to provide values for a component. Props can be a `number`, `string`, `boolean`, or even an `Object` or `Array`.
+
+<Props of={Spinner} />
+
+## Color Palettes
+<ColorPalette>
+  <ColorItem
+    title="Blinds.com"
+    subtitle="Primary"
+    colors={['#FFFFFF', '#E5E9F0', '#3060AF']}
+  />
+  <ColorItem
+    title="JustBlinds.com"
+    subtitle="Primary"
+    colors={['#FFFFFF', '#F8F8F8', '#00A895']}
+  />
+  <ColorItem
+    title="AmericanBlinds.com"
+    subtitle="Primary"
+    colors={['#FFFFFF', '#F6F6F6', '#D4B019']}
+  />
+  <ColorItem
+    title="Homedepot.com"
+    subtitle="Primary"
+    colors={['#FFFFFF', '#EEEEEE', '#F66202']}
+  />
+</ColorPalette>
+
+<!-- ## Icons
+<IconGallery>
+  <IconItem name="add">
+    <ExampleIcon icon="add" />
+  </IconItem>
+</IconGallery> -->
+
+## Integration Example
+Follow the example below to integrate the Spinner component into your application:
+
+```jsx
+import React from 'react';
+import Spinner from '@gcc/autobahn-components';
+
+const App = (props) => {
+
+  return (
+    <Spinner />
+  );
+};
+
+export default App;
+
+```
