@@ -1,6 +1,6 @@
 {
   "name": "@gcc/autobahn-components",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "Shareable components library.",
   "main": "dist/index.js",
   "scripts": {
