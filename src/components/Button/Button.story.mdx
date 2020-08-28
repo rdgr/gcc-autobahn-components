@@ -1,0 +1,58 @@
+import {
+  ArgsTable,
+  Canvas,
+  ColorItem,
+  ColorPalette,
+  Description,
+  IconGallery,
+  IconItem,
+  Meta,
+  Preview,
+  Primary,
+  Props,
+  Stories,
+  Story,
+  Subtitle,
+  Title,
+} from '@storybook/addon-docs/blocks';
+
+import Button from './Button.index';
+
+export const argTypes = {
+  label: {
+    name: 'Label',
+    control: {
+      type: 'text',
+    },
+  },
+  color: {
+    name: 'Color',
+    control: {
+      options: ['primary', 'secondary', 'tertiary'],
+      type: 'select',
+    },
+  },
+};
+
+export const previewArgs = {
+  color: 'primary',
+  label: 'This is My Button',
+};
+
+<Meta
+  argTypes={argTypes}
+  component={Button}
+  title="Basic Components/Button"
+/>
+
+# Button
+
+<Description>
+  Use the `background` and `color` properties to change the colors of the Spinners channel and indicator.
+</Description>
+
+<Preview>
+  <Story name="Intro" args={previewArgs}>
+    {(args) => <Button {...args} />}
+  </Story>
+</Preview>
