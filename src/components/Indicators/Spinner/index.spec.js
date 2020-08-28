@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Spinner from '.';
 
-describe('Progress Indicators/Spinner', () => {
+describe('Progress Indicators|Spinner', () => {
   describe('Given label', () => {
     it('Should add label after spinner', () => {
       given_label('Label Text');
@@ -54,10 +54,16 @@ describe('Progress Indicators/Spinner', () => {
     wrapper = null;
   });
 
-  const given_size = (size) => { props.size = size; };
-  const given_label = (label) => { props.label = label; };
+  const given_size = (size) => {
+    props.size = size;
+  };
+  const given_label = (label) => {
+    props.label = label;
+  };
 
-  const when_rendered = () => { wrapper = shallow(<Spinner {...props} />); };
+  const when_rendered = () => {
+    wrapper = shallow(<Spinner {...props} />);
+  };
 
   const then_label_should_be = (expectedLabel) => {
     const label = wrapper.find('.ab-spinner-label');
