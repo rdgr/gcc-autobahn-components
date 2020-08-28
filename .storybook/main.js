@@ -43,16 +43,17 @@ const path = require('path');
 module.exports = {
 	stories: ['../src/**/*.story.@(js|mdx)'],
 	addons: [
-    '@storybook/addon-a11y',
     {
-      name: '@storybook/addon-docs/preset',
+      name: '@storybook/addon-docs',
       options: {
         configureJSX: true,
         babelOptions: {},
         sourceLoaderOptions: null,
       },
     },
-    '@storybook/addon-viewport',
+    '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
+    'storybook-addon-styled-component-theme/dist/register',
   ],
 	webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
@@ -60,7 +61,6 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../src'),
     });
-
     return config;
   },
 }
