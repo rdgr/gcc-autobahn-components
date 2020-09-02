@@ -2,14 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './spinner.scss';
 
-const Spinner = ({
-  background,
-  color,
-  inline,
-  label,
-  size,
-  children,
-}) => {
+const Spinner = ({ background, color, inline, label, size, children }) => {
   let calcSize;
   let calcBorder;
 
@@ -68,14 +61,7 @@ Spinner.propTypes = {
   /** Text that will be rendered with the Spinner. */
   label: PropTypes.string,
   /** Specifies the size of the Spinner. */
-  size: PropTypes.oneOf([
-    'sm',
-    'small',
-    'med',
-    'medium',
-    'lg',
-    'large',
-  ]),
+  size: PropTypes.oneOf(['sm', 'small', 'med', 'medium', 'lg', 'large']),
   children: PropTypes.node,
 };
 

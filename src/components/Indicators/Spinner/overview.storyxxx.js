@@ -9,6 +9,5 @@ storiesOf('Components|Progress Indicators|Spinner', module)
       hierarchySeparator: /\./,
       showPanel: true,
     },
-  }).add('Overview', () => (
-    <Spinner />
-  ));
+  })
+  .add('Overview', () => <Spinner />);
