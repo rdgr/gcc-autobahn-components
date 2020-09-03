@@ -61,7 +61,7 @@ module.exports = {
     {
       files: ['src/**/*.spec.js'],
       env: {
-        jest: true,
+        jest: false,
       },
       rules: {
         'max-lines': ['warn'], // write your unit tests!
